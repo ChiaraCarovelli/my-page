@@ -14,13 +14,12 @@
 
     h1{
     position: absolute;
-    top:5%;  left:50%;
+    top:10%;  left:10%;
     transform: translate(-50%, 20%);
     font-family: "Gotham";
     font-weight:normal;
     font-size: 5vh;
     text-transform: uppercase;
-    text-align: center;
     color: #000000;
     }
 
@@ -58,7 +57,7 @@ a > a:hover {
 #page{
   position: relative;
   width:100%;
-  height:700px;
+  height:100vh;
   }
 
 .sec1{
@@ -80,6 +79,14 @@ a > a:hover {
 .sec3{
   background: url("");
   background-color:#daff84;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.sec4{
+  background: url("");
+  background-color: #f7c4ff;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -129,27 +136,38 @@ a > a:hover {
       <a class="nav-item nav-link active" href="#primo">Chi sono<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="#secondo">Progetti</a>
       <a class="nav-item nav-link" href="#terzo">Viaggi</a>
-      <a class="nav-item nav-link" href="#">Spinner</a>
+      <a class="nav-item nav-link" href="#quarto">Spinner</a>
       </div>
   </div>
 </nav>
 
 
-<h1>Chiara Carovelli</h1>
+
 
 <div id="page" class="sec1">
   <a name="primo"></a>
+  <h1>Chi sono</h1>
   </div>
 
 <div id="page" class="sec2">
   <a name="secondo"></a>
+  <h1>Progetti</h1>
 </div>
 
 <div id="page" class="sec3">
     <a name="terzo"></a>
+    <h1>Viaggi</h1>
+</div>
+
+<div id="page" class="sec4">
+    <a name="quarto"></a>
+    <h1>Spinner</h1>
 </div>
 
 
+<script>
+$("#h1").hover(fadeIn)
+</script>
 
 
     <!-- Optional JavaScript -->
