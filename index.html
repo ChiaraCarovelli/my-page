@@ -14,8 +14,8 @@
 
     h1{
     position: absolute;
-    top:10%;
-    
+    top:5%;  left:50%;
+    transform: translate(-50%, 20%);
     font-family: "Gotham";
     font-weight:normal;
     font-size: 5vh;
@@ -24,42 +24,72 @@
     color: #000000;
     }
 
-    .sfondo{
-      position: absolute;
-      top:0%;
-      left:0%;
-    }
+     a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
 
-section{
+a > a:hover {
+  color: #000;
+}
+
+ a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#page{
   position: relative;
   width:100%;
-  height:650px;
+  height:700px;
   }
 
 .sec1{
   background: url("");
-  background-color:red;
+  background-color: #ffee91 ;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .sec2{
-  background: url("rosso.jpg");
-  background-color:orange;
+  background: url("");
+  background-color: #c4ffeb;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .sec3{
-  background: url("rosso.jpg");
-  background-color:yellow;
+  background: url("");
+  background-color:#daff84;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+.navbar-nav{
+  position: absolute;
+  top: 15%; left: 50%;
+  transform: translate(-50%, 0%);
+}
 
 
     .parallax {
@@ -88,35 +118,36 @@ section{
   <body>
 
 
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: none;">
-  <a class="navbar-brand" href="#">Chiara</a>
+  <a class="navbar-brand" href="">Chiara</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Chi sono<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Progetti</a>
-      <a class="nav-item nav-link" href="#">Viaggi</a>
+      <a class="nav-item nav-link active" href="#primo">Chi sono<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#secondo">Progetti</a>
+      <a class="nav-item nav-link" href="#terzo">Viaggi</a>
+      <a class="nav-item nav-link" href="#">Spinner</a>
       </div>
   </div>
 </nav>
 
-  <h1>Chiara Carovelli</h1>
-<section class="sec1">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</section>
-<section class="sec2"></section>
-<section class="sec3"></section>
 
+<h1>Chiara Carovelli</h1>
 
+<div id="page" class="sec1">
+  <a name="primo"></a>
+  </div>
 
+<div id="page" class="sec2">
+  <a name="secondo"></a>
+</div>
 
-    <!-- Optional JavaScript
-<img class="sfondo" src="C:\Users\chiar\Desktop\Informatica\my-page\MagazineUnlock\magazine-unlock-01-2.3.934-_e7f956b3d7634294b2b85cc44eea6344.jpg" class="title" alt="Responsive image"></img>
--->
-
-
+<div id="page" class="sec3">
+    <a name="terzo"></a>
+</div>
 
 
 
