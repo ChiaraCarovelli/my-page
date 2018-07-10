@@ -14,12 +14,17 @@
 
     h1{
     position: absolute;
-    top:10%;  left:10%;
-    transform: translate(-50%, 20%);
+    top:15%;  left:5%;
     font-family: "Gotham";
     font-weight:normal;
-    font-size: 5vh;
     text-transform: uppercase;
+    color: #000000;
+    }
+
+    h2{
+    font-family: "Gotham";
+    font-weight: bold;
+    text-align: left;
     color: #000000;
     }
 
@@ -60,6 +65,12 @@ a > a:hover {
   height:100vh;
   }
 
+  #info{
+  position: absolute;
+  top:20vh; right:20vw;
+  }
+
+
 .sec1{
   background: url("");
   background-color: #ffee91 ;
@@ -86,16 +97,37 @@ a > a:hover {
 
 .sec4{
   background: url("");
-  background-color: #f7c4ff;
+  background-color: #ffe0bc;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+.sec5{
+  background: url("");
+  background-color: ;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand{
+ font-family: "Gotham";
+ text-transform: uppercase;
+}
+
 .navbar-nav{
   position: absolute;
   top: 15%; left: 50%;
+  font-family: "Gotham";
   transform: translate(-50%, 0%);
+  f
+}
+
+.foto{
+  position: absolute;
+  top: 35%; left: 10%;
+  height:20rem;
 }
 
 
@@ -125,7 +157,9 @@ a > a:hover {
   <body>
 
 
+<h1>Chiara Carovelli</h1>
 
+<div id="page" class="sec5">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: none;">
   <a class="navbar-brand" href="">Chiara</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,30 +167,34 @@ a > a:hover {
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#primo">Chi sono<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#secondo">Progetti</a>
-      <a class="nav-item nav-link" href="#terzo">Viaggi</a>
+      <a class="nav-item nav-link active" href="#primo">About Me<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#secondo">Projects</a>
+      <a class="nav-item nav-link" href="#terzo">Hobby</a>
       <a class="nav-item nav-link" href="#quarto">Spinner</a>
       </div>
   </div>
 </nav>
-
-
-
+</div>
 
 <div id="page" class="sec1">
   <a name="primo"></a>
-  <h1>Chi sono</h1>
-  </div>
+     <h1>About Me</h1>
+     <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\foto profilo.jpg" class="img-fluid foto shadow p-3 mb-5 bg-white rounded" alt="Responsive image"></img>
+       <div id="info">
+       <h2>Hi! I'm Chiara,</h2>
+       <h2>a Graphic Design student</h2>
+       <h2>based in Milan</h2>
+       </div>
+    </div>
 
 <div id="page" class="sec2">
   <a name="secondo"></a>
-  <h1>Progetti</h1>
+  <h1>Projects</h1>
 </div>
 
 <div id="page" class="sec3">
     <a name="terzo"></a>
-    <h1>Viaggi</h1>
+    <h1>Hobby</h1>
 </div>
 
 <div id="page" class="sec4">
@@ -166,7 +204,8 @@ a > a:hover {
 
 
 <script>
-$("#h1").hover(fadeIn)
+
+
 </script>
 
 
