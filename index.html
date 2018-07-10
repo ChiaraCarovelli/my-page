@@ -28,6 +28,9 @@
     color: #000000;
     }
 
+body{
+  background-color: #f0caf9;
+}
      a {
   position: relative;
   color: #000;
@@ -121,15 +124,52 @@ a > a:hover {
   top: 15%; left: 50%;
   font-family: "Gotham";
   transform: translate(-50%, 0%);
-  f
 }
 
-.foto{
+.foto1{
   position: absolute;
   top: 35%; left: 10%;
   height:20rem;
+  transform: rotate(2deg);
 }
 
+.foto2{
+  position: absolute;
+  top: 30%; left: 5%;
+  height:15rem;
+  transform: rotate(-3deg);
+}
+
+.foto3{
+  position: absolute;
+  top: 50%; left: 25%;
+  height:15rem;
+  transform: rotate(3deg);
+}
+
+.foto4{
+  position: absolute;
+  top: 30%; right:25%;
+  height:15rem;
+  transform: rotate(-3deg);
+}
+
+.foto5{
+  position: absolute;
+  top: 50%; right: 5%;
+  height:15rem;
+  transform: rotate(3deg);
+}
+
+
+@keyframes rotation {
+  from{transform: rotate(0deg);
+  from{transform: rotate(360deg);}
+}
+
+.rotate{
+  animation: rotation linear 1s;
+}
 
     .parallax {
     /* The image used */
@@ -179,8 +219,12 @@ a > a:hover {
 <div id="page" class="sec1">
   <a name="primo"></a>
      <h1>About Me</h1>
-     <img src="foto profilo.jpg" class="img-fluid foto shadow p-3 mb-5 bg-white rounded" alt="Responsive image"></img>
-       <div id="info">
+
+     <div id="profile" class="rotate">
+      <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\foto profilo.jpg" class="img-fluid foto1 shadow p-3 mb-5 bg-white rounded" alt="Responsive image"></img>
+      </div>
+
+      <div id="info">
        <h2>Hi! I'm Chiara,</h2>
        <h2>a Graphic Design student</h2>
        <h2>based in Milan</h2>
@@ -190,6 +234,14 @@ a > a:hover {
 <div id="page" class="sec2">
   <a name="secondo"></a>
   <h1>Projects</h1>
+ <div id="progetti">
+   <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_2.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+  <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_4.jpg" class="img-fluid foto3 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+  <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_2.jpg" class="img-fluid foto4 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+  <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_4.jpg" class="img-fluid foto5 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+
+
+</div>
 </div>
 
 <div id="page" class="sec3">
@@ -204,7 +256,10 @@ a > a:hover {
 
 
 <script>
-
+function rotation(){
+  $("#profile").fadeIn();
+}
+  $("#info").hover(rotation)
 
 </script>
 
