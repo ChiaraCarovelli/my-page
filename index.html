@@ -14,7 +14,7 @@
 
     h1{
     font-family: "Gotham";
-    font-weight: bold;
+    font-weight: normal;
     text-transform: uppercase;
     color: #333035;
     }
@@ -24,6 +24,7 @@
     top:8%;  left:5%;
     font-family: "Gotham";
     font-weight: bold;
+    font-size: 2.5em;
     text-transform: uppercase;
     color: #333035;
   }
@@ -43,10 +44,6 @@
     }
 
 body{
-background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
-background-repeat: no-repeat;
-background-size: cover;
-
 }
 
 a {
@@ -99,6 +96,12 @@ h2 > h2:hover {
   transform: scaleX(1);
 }
 
+#nome{
+  position: absolute;
+  width:100vw;
+  height:50vh;
+  top: 10vh;
+}
 
 #page{
   position: relative;
@@ -143,12 +146,12 @@ width: 100vw;
   background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment:local;
   background-repeat: no-repeat;
 }
 
 .sec3{
-  background-color: #ecd3ed;
+  background-color:#ecd3ed;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -200,38 +203,21 @@ line-height: 2vh;
 
 .foto1{
   position: absolute;
-  top: 35%; left: 30vw;
+  top: 25vh;
   height:50vh;
-  transform: rotate(0deg);
+  transform: rotate(-2deg);
 }
 
 .foto2{
-  position: absolute;
-  top: 15%; left: 35%;
-  height:15rem;
+  height:10em;
   transform: rotate(3deg);
 }
 
 .foto3{
-  position: absolute;
-  top: 20%; right: 10%;
-  height:15rem;
+  height:10em;
   transform: rotate(-3deg);
 }
 
-.foto4{
-  position: absolute;
-  top: 55%; left:35%;
-  height:15rem;
-  transform: rotate(-3deg);
-}
-
-.foto5{
-  position: absolute;
-  top: 55%; right: 10%;
-  height:15rem;
-  transform: rotate(3deg);
-}
 
 
 @keyframes rotation {
@@ -339,12 +325,16 @@ background-color: transparent;
    transform-origin: center;
  }
 
+
   .parallax {
     /* The image used */
+    background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     /* Set a specific height */
-    height: 50vh;
+    height: 100vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -355,20 +345,18 @@ background-color: transparent;
 
 </style>
 
-<!-- Container element -->
-<div class="parallax"></div>
-
-    </style>
-
 
   </head>
 
   <body>
+    <!-- Container element -->
+<div class="parallax "></div>
 
+<div id="nome">
+<h1 class=" text-center swing">Chiara Carovelli</h1>
+</div>
 
-<h1 id="nome" class="text-center swing">Chiara Carovelli</h1>
-
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: none;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light  my-sm-0" style="background-color: none;">
   <a class="navbar-brand font-weight-bold" href="">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -388,18 +376,30 @@ background-color: transparent;
 
 <div id="page" class="sec1">
   <a name="primo"></a>
-     <h2 class="text-left ">About Me</h2>
+ <h2 class="text-left ">About Me</h2>
 
-     <div id="profile" >
-      <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\foto profilo.jpg" class="img-fluid foto1 shadow p-3 mb-5 bg-white rounded" alt="Responsive image"></img>
-      </div>
+  <div class="row">
+  <div class="col-sm-3">
 
-      <div id="about">
-       <h3 class="text-left">Hi! I'm Chiara,</h3>
-       <h3 class="text-left">a Graphic Design student</h3>
-       <h3 class="text-left">based in Milan</h3>
-       </div>
+  </div>
+
+
+    <div id="profile" class="col-sm-5" >
+     <img src="https://drive.google.com/drive/u/0/folders/15mjk7tQi-sSjWTLHlkyEyePv5_kIfBl4" class="img-fluid foto1 shadow p-3 mb-5 bg-white rounded" alt="Responsive image"></img>
     </div>
+
+
+    <div id="about" class="col-sm-4">
+      <h3 class=" text-left">Hi! I'm Chiara,</h3>
+      <h3 class=" text-left">a Graphic Design student</h3>
+      <h3 class=" text-left">based in Milan</h3>
+     </div>
+
+  </div>
+</div>
+
+
+
 
 <div id="page" class="sec2">
   <h2 class="text-left">Projects</h2>
@@ -443,21 +443,45 @@ background-color: transparent;
     </div>
   </div>
 
-
 </div>
 
 <div id="page" class="sec3">
     <a name="terzo"></a>
     <h2 class="text-left">Hobby</h2>
-   <div id="hobby" class="float-right">
-     <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_1.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
-    <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_4.jpg" class="img-fluid foto3 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
-    <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_2.jpg" class="img-fluid foto4 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
-    <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_4.jpg" class="img-fluid foto5 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
-  </div>
+
+<div class="row col align-items-end">
+  <div class="col-md-3 col-xs-6">
+  <h3>title</h3>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_2.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+
 </div>
 
-<div id="page" class="sec4">
+<div class="col-md-3 col-xs-6">
+<h3>title</h3>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_2.jpg" class="img-fluid foto3 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+</div>
+
+<div class="col-md-3 col-xs-6">
+<h3>title</h3>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_1.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+
+</div>
+
+<div class="col-md-3 col-xs-6">
+<h3>title</h3>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<img src="C:\Users\chiar\Desktop\Informatica\my-page\images\projects\fmp_4.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+</div>
+
+</div>
+
+   </div>
+
+
+<div id="page" class="sec4 parallax">
     <a name="quarto"></a>
     <h2>Game</h2>
 
