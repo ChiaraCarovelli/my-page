@@ -13,9 +13,6 @@
     <style>
 
     h1{
-    position: absolute;
-    left: 25svw;
-    top: 5vh;
     font-family: "Gotham";
     font-weight: bold;
     text-transform: uppercase;
@@ -37,11 +34,12 @@
     color: #000000;
     }
 
-    p{
+  p{
     font-family: "Gotham";
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: #000000;
+    line-height: 3vh;
     }
 
 body{
@@ -108,53 +106,57 @@ h2 > h2:hover {
   height:100vh;
   }
 
-  #info{
+  #about{
   position: absolute;
   top:20vh; right:20vw;
   }
 
   #game{
   position: absolute;
-  top:20vh; right:20vw;
+  top: 25vh; left: 30vh;
+  transform: translate(-50%,-50%);
   }
 
-#caption{
-  position: relative;
-  top: 50vh; right:20vw;
+  #button{
+    position: absolute;
+    left: 20vh; top: 35vh;
+    font-family: "Gotham";
+    font-weight: bold;
+    font-size: 3vh;
+    color: #000000;
   }
-}
+
 
 .top{
-background-image: url("https://i.pinimg.com/564x/ca/52/04/ca5204767c2c5c637c3d00050875c62c.jpg");
 width: 100vw;
 }
 
 .sec1{
-  background: url("");
-  background-color: #ecd3ed;
+  background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .sec2{
-  background: url("");
-   /*background-color: #c4ffeb;*/
+  background-color: #ecd3ed;
+    background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .sec3{
-  background: url("");
-  background-color:#ecd3ed;
+background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .sec4{
-  background: url("");
+  background-color: #ecd3ed;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -179,11 +181,13 @@ width: 100vw;
 .carousel-item{
 height:45vw;
 align-self: center;
-margin-top: 25vh;
+margin-top: 10vh;
 }
 
 .carousel-img{
 width:100%;
+margin-top: 20vh;
+
 }
 
 .carousel-caption{
@@ -265,7 +269,9 @@ line-height: 2vh;
   position: absolute;
   width: 50vw;
   height: 50vh;
-  transform: translate(70%, 50%);}
+  transform: translate(70%, 50%);
+  background-color: transparent;
+}
 
 #q1{ /*ai singoli quadrati indico solo il colore*/
 background-color: #fff39e;}
@@ -280,7 +286,10 @@ background-color: #ffd3b5; }
 {width: 50vh; /*perché ruoti ci serve un contenitore senza posizione*/
  height: 50vh;
  border: 1px black;
+background-color: transparent;
  }
+
+
 
  .quadrato /*faccio una classe comune a tutti i quadrati dove indico dimensioni e posizione*/
  {
@@ -310,6 +319,14 @@ background-color: #ffd3b5; }
   left: 45vh;
  }
 
+@keyframes appear {
+0%{opacity: 0%;}
+100%{opacity: 100%;}
+}
+
+.appear{
+  animation: appear linear 1s;
+}
 
  @keyframes spin /*@keyframes nomedellafunzione si usa per le animazioni*/
  {
@@ -322,13 +339,12 @@ background-color: #ffd3b5; }
    transform-origin: center;
  }
 
-
   .parallax {
     /* The image used */
 
 
     /* Set a specific height */
-    height: 500px;
+    height: 50vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -336,6 +352,7 @@ background-color: #ffd3b5; }
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 </style>
 
 <!-- Container element -->
@@ -349,10 +366,10 @@ background-color: #ffd3b5; }
   <body>
 
 
-<h1>Chiara Carovelli</h1>
+<h1 id="nome" class="text-center swing">Chiara Carovelli</h1>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: none;">
-  <a class="navbar-brand font-weight-bold" href="">Chiara</a>
+  <a class="navbar-brand font-weight-bold" href="">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -377,7 +394,7 @@ background-color: #ffd3b5; }
       <img src="C:\Users\chiar\Desktop\Informatica\my-page\images\foto profilo.jpg" class="img-fluid foto1 shadow p-3 mb-5 bg-white rounded" alt="Responsive image"></img>
       </div>
 
-      <div id="info">
+      <div id="about">
        <h3 class="text-left">Hi! I'm Chiara,</h3>
        <h3 class="text-left">a Graphic Design student</h3>
        <h3 class="text-left">based in Milan</h3>
@@ -385,8 +402,9 @@ background-color: #ffd3b5; }
     </div>
 
 <div id="page" class="sec2">
-  <a name="secondo"></a>
   <h2 class="text-left">Projects</h2>
+  <a name="secondo"></a>
+
 
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -443,25 +461,30 @@ background-color: #ffd3b5; }
     <a name="quarto"></a>
     <h2>Game</h2>
 
-    <div id="quadratini">
+  <div id="quadratini">
         <div id="c2" class="">
           <div id="q1" class="quadrato alto-sinistra"></div>
           <div id="q2" class="quadrato alto-destra"></div>
           <div id="q3" class="quadrato basso-sinistra"></div>
           <div id="q4" class="quadrato basso-destra"></div>
-        </div>
+       </div>
 
-       <div id="game">
-        <p>Click on the yellow square</p>
-        <p>Then click on on it again</p>
-        <p>Try to catch it to make it stop!</p>
-    </div>
-    </div>
 
-</div>
+
+      <div id="game">
+        <p id="info1" >Click on the yellow square</p>
+        <p id="info2" class="d-none">Then click on it again</p>
+        <p id="info3" class="d-none">Try to catch it to make it stop!</p>
+      </div>
+
+      <button id="button" type="button" class="btn btn-light">Restart</button>
+      </div>
+
+      </div>
 
 
 <script>
+
 function alto_destra(){
   if ($("#q1").hasClass("alto-sinistra"))
     {
@@ -469,15 +492,18 @@ function alto_destra(){
     $("#q1").addClass("alto-destra")
     $("#q2").removeClass("alto-destra")
     $("#q2").addClass("alto-sinistra")
+    $("#info2").removeClass("d-none")
+
     }
 
    else if ($("#q1").hasClass("alto-destra"))
    {
      $("#c2").addClass("spinning")
-   }
-    else { /*ci vuole sempre un else, anche se vuoto () */
+         $("#info3").removeClass("d-none")
 
-    }
+       }
+    else {} /*ci vuole sempre un else, anche se vuoto () */
+
   }
 
  $("#q1").click(alto_destra)
@@ -490,6 +516,22 @@ $("#q3").hover(stop)
 $("#q4").hover(stop)
 $("#q2").hover(stop)
 
+function restart(){
+  if ($("#q1").hasClass("alto-destra"))
+    {
+    $("#q1").removeClass("alto-destra")
+    $("#q1").addClass("alto-sinistra")
+    $("#q2").removeClass("alto-sinistra")
+    $("#q2").addClass("alto-destra")
+    $("#info2").addClass("d-none")
+    $("#info3").addClass("d-none")
+
+
+    }
+    else {}
+  }
+
+  $("#button").click(restart)
 
 
 </script>
