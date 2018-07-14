@@ -16,7 +16,7 @@
     font-family: "Gotham";
     font-weight: normal;
     text-transform: uppercase;
-    color: #333035;
+    color: #514851;
     }
 
     h2{
@@ -44,6 +44,10 @@
     }
 
 body{
+  background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
@@ -98,10 +102,8 @@ h2 > h2:hover {
 
 #nome{
   position: absolute;
-  width:100vw;
-  height:50vh;
-  top: 10vh;
-}
+  top: 27vh; left: 43vw;
+  }
 
 #page{
   position: relative;
@@ -113,6 +115,19 @@ h2 > h2:hover {
   position: absolute;
   top:20vh; right:20vw;
   }
+
+  #ball{
+  position: absolute;
+  background-color:#ecd3ed;
+  top: 10vh;
+  right: 50vw;
+  height: 45vh;
+  width: 45vh;
+  border-radius: 50%;
+  border: 2px dashed #a895a8;
+  transform: translateX(50%);
+  }
+
 
   #game{
   position: absolute;
@@ -133,6 +148,7 @@ h2 > h2:hover {
 .top{
 width: 100vw;
 }
+
 
 .sec1{
   background-color: #ecd3ed;
@@ -209,8 +225,10 @@ line-height: 2vh;
 }
 
 .foto2{
-  height:10em;
-  transform: rotate(3deg);
+  position: absolute;
+  top: 25vh;
+  height:50vh;
+  transform: rotate(2deg);
 }
 
 .foto3{
@@ -260,13 +278,13 @@ line-height: 2vh;
 }
 
 #q1{ /*ai singoli quadrati indico solo il colore*/
-background-color: #fff39e;}
+background-color: #f9e96b;}
 #q2{
- background-color:  #d8bfff;}
+ background-color:  #c994d1;}
 #q3{
- background-color: #fcb5dc;  }
+ background-color: #ffa8c3;  }
 #q4{
-background-color: #ffd3b5; }
+background-color: #f99a6b; }
 
 #c2
 {width: 50vh; /*perché ruoti ci serve un contenitore senza posizione*/
@@ -326,21 +344,38 @@ background-color: transparent;
  }
 
 
-  .parallax {
-    /* The image used */
+  .parallax1 {
+    /* The image used*/
     background-image: url("https://i.pinimg.com/originals/a8/17/da/a817da9979f09587bb475330adb14525.png");
     background-repeat: no-repeat;
     background-size: cover;
 
 
     /* Set a specific height */
-    height: 100vh;
+    height: 60vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax2 {
+  /* The image used*/
+  background-color:  #ecd3ed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  /* Set a specific height */
+  height: 50vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 </style>
@@ -350,10 +385,13 @@ background-color: transparent;
 
   <body>
     <!-- Container element -->
-<div class="parallax "></div>
+<div class="parallax1 ">
 
-<div id="nome">
-<h1 class=" text-center swing">Chiara Carovelli</h1>
+<header >
+
+  <div id="ball"></div>
+    <h1 id="nome" class="text-center swing">Chiara</h1>
+</header>
 </div>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light  my-sm-0" style="background-color: none;">
@@ -365,16 +403,14 @@ background-color: transparent;
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#primo">About Me<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="#secondo">Projects</a>
-      <a class="nav-item nav-link" href="#terzo">Hobby</a>
+      <a class="nav-item nav-link" href="#terzo">Drawings</a>
       <a class="nav-item nav-link" href="#quarto">Game</a>
       </div>
   </div>
 </nav>
 
-<div class"top">
-</div>
 
-<div id="page" class="sec1">
+<div id="page" class="sec1 ">
   <a name="primo"></a>
  <h2 class="text-left ">About Me</h2>
 
@@ -393,12 +429,11 @@ background-color: transparent;
       <h3 class=" text-left">a Graphic Design student</h3>
       <h3 class=" text-left">based in Milan</h3>
 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Here's my personal page in which I'll show you a few of my projects, what I love doing in my spare time and a little game I made. Enjoy!Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
      </div>
-
-  </div>
 </div>
+  </div>
 
 
 <div id="page" class="sec2">
@@ -442,46 +477,38 @@ background-color: transparent;
       <span class="sr-only">Next</span>
     </div>
   </div>
-
 </div>
+
 
 <div id="page" class="sec3">
     <a name="terzo"></a>
-    <h2 class="text-left">Hobby</h2>
+    <h2 class="text-left">Drawings</h2>
 
-<div class="row col align-items-end">
+
+<div class="row">
   <div class="col-md-3 col-xs-6">
-  <h3>title</h3>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  <img src="images\red.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+    <img src="pictures\statua.png" class="foto1 shadow "></img>
+          </div>
 
+<div class="col-md-3 col-xs-6">
+  <img src="pictures\francini2.png" class="foto2 shadow"></img>
 </div>
 
 <div class="col-md-3 col-xs-6">
-<h3>title</h3>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-<img src="images\red.jpg" class="img-fluid foto3 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
+ <img src="pictures\stiller.png" class="foto1 shadow"></img>
 </div>
 
 <div class="col-md-3 col-xs-6">
-<h3>title</h3>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-<img src="images\red.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
-
+  <img src="pictures\jolie.png" class="foto2 shadow"></img>
+</div>
 </div>
 
-<div class="col-md-3 col-xs-6">
-<h3>title</h3>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-<img src="images\red.jpg" class="img-fluid foto2 shadow p-2 mb-5 bg-white rounded" alt="Responsive image"></img>
-</div>
-
-</div>
 
    </div>
 
+<div class="parallax2 "></div>
 
-<div id="page" class="sec4 parallax">
+<div id="page" class="sec4">
     <a name="quarto"></a>
     <h2>Game</h2>
 
@@ -496,7 +523,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 
       <div id="game">
-        <p id="info1" >Click on the yellow square</p>
+       <p id="info1" >Click on the yellow square</p>
         <p id="info2" class="d-none">Then click on it again</p>
         <p id="info3" class="d-none">Try to catch it to make it stop!</p>
       </div>
