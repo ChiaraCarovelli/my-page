@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="icon" href="images/favicon.png"></link>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="jquery.min.js"></script>
-    <title>Chiara Carovelli</title>
+    <title>Chiara</title>
 
     <style>
 
@@ -17,6 +18,7 @@
     font-weight: normal;
     text-transform: uppercase;
     color: #514851;
+    cursor: pointer;
     }
 
     h2{
@@ -27,18 +29,21 @@
     font-size: 2.5em;
     text-transform: none;
     color: #333035;
+    cursor: pointer;
   }
 
     h3{
     font-family: "Gotham";
     font-weight: bold;
     color: #000000;
+    cursor: pointer;
     }
 
     h5{
     font-family: "Gotham";
     font-weight: normal;
     color: #000000;
+    cursor: pointer;
     }
 
   p{
@@ -47,6 +52,7 @@
     font-size: 2.5vh;
     color: #000000;
     line-height: 3vh;
+    cursor: pointer;
     }
 
 body{
@@ -60,6 +66,7 @@ a {
   position: relative;
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a > a:hover {
@@ -113,7 +120,7 @@ h2 > h2:hover {
 
 #nome{
   position: absolute;
-  top: 15vh; left:4vw;
+  top: 15vh; left:5vw;
    height: 10vh;
     }
 
@@ -250,7 +257,10 @@ line-height: 2vh;
   transform: rotate(2deg);
 }
 
-
+.nome:hover{
+  transform: scale(1.3);
+  transition: ease 0.5s;
+  }
 
 .pic:hover{
   transform: scale(1.2) rotate(5deg);
@@ -421,8 +431,8 @@ background-color: transparent;
 
 <header >
 
-  <div id="ball" class="pic" >
-      <h2 id="nome"class="pic">CHIARA</h2>
+  <div id="ball" class="" >
+      <h1 id="nome"class="swing">CHIARA</h1>
   </div>
 
   </header>
@@ -460,7 +470,7 @@ background-color: transparent;
 
 
     <div id="about" class="col-sm-4">
-      <h3 class=" text-left stand">Ciao! Sono Chiara</h3>
+      <h3 class="stand">Ciao! Sono Chiara</h3>
 
 <h5 class="">Ho frequentato il liceo scientifico ma sono sempre stata una persona creativa. Ora studio <b> Design della Comunicazione</b> a Milano.</h5>
 <h5 class="">Nel mio tempo libero c'è soprattutto la <b>musica</b>: mi piace suonare il pianoforte e sono un'appassionata di musical e di danza. </h5>
@@ -520,7 +530,7 @@ background-color: transparent;
 <div id="page" class="sec3">
     <a name="terzo"></a>
     <h2 class="text-left">Disegni</h2>
-    
+
 
 
 <div class="row">
@@ -559,7 +569,7 @@ background-color: transparent;
 
 
       <div id="game">
-       <p id="info1" class="stand">Clicca sul quadratino giallo</p>
+       <p id="info1" class="">Clicca sul quadratino giallo</p>
         <p id="info2" class="d-none">Cliccaci ancora </p>
         <p id="info3" class="d-none">Cerca di acchiapparne uno per fermarli!</p>
       </div>
